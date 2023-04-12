@@ -4,8 +4,10 @@ import 'package:get/get.dart';
 
 import 'infrastructure/navigation/navigation.dart';
 import 'infrastructure/navigation/routes.dart';
+import 'initializer.dart';
 
 void main() async {
+  await Initializer.init();
   var initialRoute = await Routes.initialRoute;
   runApp(Main(initialRoute));
 }

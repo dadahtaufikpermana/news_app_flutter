@@ -33,7 +33,6 @@ class Initializer {
     final connect = GetConnect();
     final url = ConfigEnvironments.getEnvironments()['url'];
     connect.baseUrl = url;
-    connect.httpClient.maxAuthRetries = 0;
 
     Logger().i('connected to: $url');
     Get.put(connect);

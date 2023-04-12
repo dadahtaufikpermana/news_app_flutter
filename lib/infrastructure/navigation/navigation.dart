@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-
+import 'package:news_app_flutter/presentation/home/category_screen.dart';
+import 'package:news_app_flutter/presentation/home/sources_screen.dart';
 import '../../config.dart';
-import '../../presentation/bindings/controllers/home.controller.binding.dart';
+import '../../presentation/bindings/controllers/category_binding.dart';
+import '../../presentation/bindings/controllers/article_binding.dart';
+import '../../presentation/bindings/controllers/sources_binding.dart';
+import '../../presentation/home/splash.dart';
+import '../../presentation/home/web_view_screen.dart';
 import '../../presentation/screens.dart';
-import 'bindings/controllers/controllers_bindings.dart';
 import 'routes.dart';
 
 class EnvironmentsBadge extends StatelessWidget {
@@ -28,9 +31,31 @@ class EnvironmentsBadge extends StatelessWidget {
 class Nav {
   static List<GetPage> routes = [
     GetPage(
-      name: Routes.HOME,
-      page: () => const HomeScreen(),
-      binding: HomeControllerBinding(),
+      name: Routes.ARTICLE,
+      page: () =>  ArticleScreen(),
+      binding: ArticleBinding(),
+    ),
+
+    GetPage(
+      name: Routes.CATEGORY,
+      page: () =>  CategoryScreen(),
+      binding: CategoryBinding(),
+    ),
+
+    GetPage(
+      name: Routes.SOURCES,
+      page: () =>  SourcesScreen(),
+      binding: SourcesBinding(),
+    ),
+
+    GetPage(
+      name: Routes.WEBVIEW,
+      page: () =>  WebViewScreen(),
+    ),
+
+    GetPage(
+      name: Routes.SPLASH,
+      page: () =>  SplashScreen(),
     ),
   ];
 }

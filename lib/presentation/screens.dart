@@ -1,1 +1,1 @@
-export 'package:news_app_flutter/presentation/home/home.screen.dart';
+export 'package:news_app_flutter/presentation/home/article.screen.dart';

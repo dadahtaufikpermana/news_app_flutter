@@ -8,14 +8,28 @@ environment:
 dependencies: 
   cupertino_icons: ^1.0.2
   get: 4.6.5
-  flutter: 
+  easy_splash_screen: 1.0.4
+  logger: ^1.3.0
+  shrink_sidemenu: 2.0.0+2-null-safety
+  webview_flutter: ^2.1.1
+  cached_network_image: ^3.1.0
+  flutter:
     sdk: flutter
 
 dev_dependencies: 
   flutter_lints: 2.0.1
+  flutter_launcher_icons: ^0.12.0
+
+flutter_icons:
+  android: "launcher_icon"
+  min_sdk_android: 21
+  ios: true
+  image_path: "assets/images/ic_logo_news.png"
   flutter_test: 
     sdk: flutter
 
-flutter: 
+flutter:
+  assets:
+    - assets/images/
   uses-material-design: true
 
